@@ -24,9 +24,7 @@ export class Blank extends React.Component {
   render = () => (
     <View style={styles.View_1}>
       <View style={styles.View_3}>
-        <TouchableOpacity onPress={() => this.props.navigation.navigate("")}>
-          <Icon name="align-justify" style={styles.Icon_6} />
-        </TouchableOpacity>
+        <Icon name="align-justify" style={styles.Icon_6} />
       </View>
     </View>
   )
@@ -34,6 +32,23 @@ export class Blank extends React.Component {
 
 const styles = StyleSheet.create({
   container: { flex: 1, marginHorizontal: 16 },
+  View_1: {
+    flexDirection: "row",
+    flexWrap: "nowrap",
+    alignContent: "flex-start"
+  },
+
+  View_3: {
+    width: 0,
+    height: 40,
+    flexDirection: "row",
+    flexWrap: "nowrap",
+    alignContent: "flex-start",
+    borderWidth: 2,
+    borderRadius: 1
+  },
+
+  Icon_6: { marginLeft: 5, alignSelf: "flex-start", fontSize: 14 },
   View_1: {
     flexDirection: "row",
     flexWrap: "nowrap",
@@ -48,7 +63,14 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderRadius: 1
   },
-  Icon_6: { marginLeft: 5, alignSelf: "flex-start", fontSize: 14 }
+  Icon_6: {
+    marginLeft: 5,
+    alignSelf: "flex-start",
+    borderWidth: 1,
+    borderRadius: -4,
+    fontSize: 14,
+    lineHeight: 11
+  }
 })
 
 function mapStateToProps(state) {
